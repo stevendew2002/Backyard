@@ -1,0 +1,84 @@
+<head>
+
+  <meta charset="UTF-8" />
+  <title>Backyard BBQ</title>
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="gallery.js">
+</head>
+
+<body>
+  <img class="title" src="title.jpg" alt="title">
+
+  <div class="task-bar">
+    <ul class="task-bar">
+      <li class="task-bar"><a href="index.html">Back to main page</a></li>
+
+    </ul>
+  </div>
+
+  <div class="w3-container">
+
+  </div>
+
+  <div class="w3-content w3-display-container">
+
+    <div class="w3-display-container mySlides">
+      <img src="IMG_2722.jpg" style="width:100%" class="slideimg">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Steak
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="IMG_5224.jpg" style="width:100%" class="slideimg">
+      <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+        Strawberry Short Cake
+      </div>
+    </div>
+
+    
+
+    <div class="w3-display-container mySlides">
+      <img src="20180223_073201.png" style="width:100%" class="slideimg">
+      <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+        Chicken and White Grave
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="IMG_6679.jpg" style="width:100%" class="slideimg">
+      <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+        Dessert
+      </div>
+    </div>
+
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
